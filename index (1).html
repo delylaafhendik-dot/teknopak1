@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peta Risiko Banjir Kota Kediri</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Peta Risiko Banjir Kota Kediri</h1>
+  </header>
+
+  <div id="map" aria-label="Peta risiko banjir"></div>
+
+  <aside class="panel" aria-live="polite">
+    <div id="status" class="status status-idle">
+      <div class="status-label">Status lokasi Anda</div>
+      <div id="status-text" class="status-text">Belum dilacak</div>
+      <div id="status-detail" class="status-detail">Tekan tombol di bawah untuk mendeteksi lokasi Anda.</div>
+    </div>
+
+    <div class="actions">
+      <button id="btn-locate" type="button">Deteksi lokasi saya</button>
+      <button id="btn-stop" type="button" class="secondary" hidden>Berhenti melacak</button>
+    </div>
+
+    <div class="legend">
+      <div><span class="dot rendah"></span> Risiko rendah</div>
+      <div><span class="dot sedang"></span> Risiko sedang</div>
+      <div><span class="dot tinggi"></span> Risiko tinggi</div>
+    </div>
+  </aside>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
